@@ -6,12 +6,15 @@ function Home() {
     // Update the document title using the browser API
     console.log(`Hello functions are coming...`);
 
-    fetch("/.netlify/functions/hello")
+   let fe = fetch("/.netlify/functions/date")
       .then(response => response.json())
-      .then(json => console.log(json))
+      .then(json => {
+        console.log(json)
+        return json
+      })
   });
-
-  return <div>Welcome to Next.js!</div>;
+console.log(fe)
+  return <div>Welcome fe</div>;
 }
 
 export default Home;
